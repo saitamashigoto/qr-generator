@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR生成ツール</title>
+    <link href="{{url_for('static',filename='css/output.css')}}" rel="stylesheet">
+    <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
+</head>
+<body>
+    <div class="h-4/5 my-auto">
+        <header class="my-8 mt-12">
+            <h1 class="text-center font-bold text-3xl">資産管理用QR生成</h1>
+        </header>
+        <main class="flex justify-center items-center mt-">
+            <form action="/create" method="post" class="max-w-sm mx-auto">
+                <div class="mb-5">
+                    <label class="block mb-2 text-sm font-medium dark:text-white">使用部署</label>
+                    <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="shiyou_busho" type="text" />
+                </div>
+                <div class="mb-5">
+                    <label class="block mb-2 text-sm font-medium dark:text-white">PC名</label>
+                    <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="pc_mei" type="text" />
+                </div>
+                <div class="mb-5">
+                    <label class="block mb-2 text-sm font-medium dark:text-white">シリアル番号</label>
+                    <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="shiriaru_bangou" type="text" />
+                </div>
+                <div class="mb-5">
+                    <label class="block mb-2 text-sm font-medium dark:text-white">ノート</label>
+                    <textarea class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="note"></textarea>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4">
+                    <button class="py-2.5 px-5 me-2 mb-2 text-sm font-medium focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="submit">生成</button>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
